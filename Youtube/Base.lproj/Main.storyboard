@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Youtube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXJ-Ng-87M" customClass="YouTubePlayerView" customModule="YouTubePlayer">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tnv-Je-MJF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="f04-pQ-s6U">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aXJ-Ng-87M" secondAttribute="trailing" id="1YR-3F-Vqo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tnv-Je-MJF" secondAttribute="trailing" id="2Yw-uN-PXa"/>
+                            <constraint firstItem="aXJ-Ng-87M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EF7-pL-y5Y"/>
+                            <constraint firstItem="aXJ-Ng-87M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="H9c-3g-M6M"/>
+                            <constraint firstItem="tnv-Je-MJF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lrh-Xf-ueI"/>
+                            <constraint firstItem="f04-pQ-s6U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MLZ-eq-sYS"/>
+                            <constraint firstItem="tnv-Je-MJF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UdI-jz-SB9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tnv-Je-MJF" secondAttribute="bottom" id="b8w-Vt-qxh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aXJ-Ng-87M" secondAttribute="bottom" id="daV-Vl-4wO"/>
+                            <constraint firstItem="f04-pQ-s6U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lhb-Pb-L5m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="image_view" destination="tnv-Je-MJF" id="kTs-5i-ern"/>
+                        <outlet property="indicator" destination="f04-pQ-s6U" id="dGA-fM-KBz"/>
+                        <outlet property="youtube_player" destination="aXJ-Ng-87M" id="k4x-cH-JNp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="139"/>
+        </scene>
+    </scenes>
+</document>
